@@ -1,0 +1,11 @@
+.skip-option {
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.skip-navigation {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    background-color: lightblue;
+}
