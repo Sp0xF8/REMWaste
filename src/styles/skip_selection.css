@@ -1,0 +1,24 @@
+.select-skip-container {
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 5rem;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1250px) {
+    .select-skip-container {
+        padding: 2rem 2rem;
+        flex-direction: column;
+
+    }
+  
+}
+
+@media screen and (max-width: 600px) {
+    .select-skip-container {
+        padding: 0.5rem 0.5rem;
+    }
+  
+}

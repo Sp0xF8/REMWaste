@@ -37,3 +37,11 @@
 .vatInc {
     font-size: smaller;
 }
+
+@media screen and (max-width: 1250px) {
+    .skip-navigation {
+        width: 100%;
+    }
+    
+}
+

@@ -3,7 +3,7 @@ import React from "react";
 import { SkipSelectionProvider } from "../../context/skip_selection";
 import SkipNavigation from "./options_nav";
 import SkipOption from "./option";
-import "../../styles/skip_selection_nav.css";
+import "../../styles/skip_selection.css";
 
 function SelectSkip() {
 

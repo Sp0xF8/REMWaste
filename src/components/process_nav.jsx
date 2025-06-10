@@ -36,7 +36,7 @@ function OrderProcessNav(){
         <div className='order-process-nav-container'>
             <div className='go-back' onClick={prevStep}>
                 <span className='back-arrow'>&#8592;</span>
-                <span>Go Back</span>
+                <span>Back</span>
             </div>
             <div className="order-process-nav">
                 {navOptions}

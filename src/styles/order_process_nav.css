@@ -10,6 +10,7 @@
 .go-back {
     width: 20%;
     background-color: #494949;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +18,7 @@
 }
 
 .go-back:hover {
-  background-color: #000000;
+  background-color: #202020;
   color: #ffffff;
 }
 
@@ -57,7 +58,7 @@
 }
 
 .nav-option.active {
-  color: #000000;
+  color: yellow;
   font-weight: bold;
     background-color: #705858;
 }
@@ -66,4 +67,21 @@
   color: #ffffff;
   background-color: #494949;
   cursor: not-allowed;
+}
+
+@media screen and (max-width: 500px) {
+
+  .nav-option > span {
+    display: none;
+  }
+
+  .nav-option.active > span {
+    display: block;
+  }
+
+  .go-back {
+    flex-direction: column-reverse;
+  }
+
+  
 }

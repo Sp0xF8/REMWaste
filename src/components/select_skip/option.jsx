@@ -41,6 +41,10 @@ function SkipOption(){
                                     <div className='skip-selected-col1-row-value'><span>{skipSelection.size} cubic yards</span></div>
                                 </div>
                                 <div className='skip-selected-body-col1-row'>
+                                    <div className='skip-selected-col1-row-label'><span>Hire Length:</span></div>
+                                    <div className='skip-selected-col1-row-value'><span>{skipSelection.hire_period_days} days</span></div>
+                                </div>
+                                <div className='skip-selected-body-col1-row'>
                                     <div className='skip-selected-col1-row-label'><span>Price:</span></div>
                                     <div className='skip-selected-col1-row-value'><span>£{(skipSelection.price_before_vat).toFixed(2)}</span></div>
                                 </div>
@@ -72,7 +76,7 @@ function SkipOption(){
                                     <div className='skip-selected-col1-row-label'><span>{skipSelection.allows_heavy_waste ? 'Holds heavy waste' : 'Does not hold heavy waste'}</span></div>
                                     {skipSelection.allows_heavy_waste ? (<></>) : (
                                         <div className='skip-selected-col1-row-value checkbox-container'>
-                                            <span>Accept:</span>
+                                            <span>Accept</span>
                                             <input type='checkbox' required/>
                                         </div>
                                     )}
@@ -81,7 +85,7 @@ function SkipOption(){
                                     <div className='skip-selected-col1-row-label'><span>{skipSelection.allowed_on_road ? 'Allowed on the road' : 'Not allowed on the road'}</span></div>
                                     {skipSelection.allowed_on_road ? (<></>) : (
                                         <div className='skip-selected-col1-row-value checkbox-container'>
-                                            <span>Accept:</span>
+                                            <span>Accept</span>
                                             <input type='checkbox' required/>
                                         </div>
                                     )}
