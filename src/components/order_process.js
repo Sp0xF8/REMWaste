@@ -6,7 +6,6 @@ export const orderProcess = [
         id: 1,
         title: 'Postcode',
         component: EmptyComponent,
-        icon: 'https://example.com/icons/postcode.svg', // Example icon URL
     },
     {
         id: 2,
