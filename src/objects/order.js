@@ -30,8 +30,7 @@ class Order {
         this.id = json_data.id || '';
         this.address = new Address(json_data.address);
         this.wasteType = json_data.wasteType || WasteType.HOUSEHOLD;
-        this.date = json_data.date || '';
-        this.timeSlot = json_data.timeSlot || '';
+        this.skipSize = json_data.skipSize || 0; // Size in cubic yards
     }
 
     toJSON() {

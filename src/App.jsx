@@ -10,7 +10,7 @@ import { OrderProgressContext } from './context/order_progress'
 import React, { useContext } from 'react'
 function App() {
 
-  const { current_step } = useContext(OrderProgressContext)
+  const { current_step } = useContext(OrderProgressContext);
 
 
   const currentComponent = orderProcess[current_step]

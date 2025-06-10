@@ -7,14 +7,16 @@ import "../../styles/skip_options_nav.css";
 function SkipNavigation(){
 
     const [skips, setSkips] = useState([]);
-    const { updateSkipSelection, skips_Data } = React.useContext(SkipSelectionContext);
+    const { updateSkipSelection, skips_Data, skipSelection } = React.useContext(SkipSelectionContext);
 
     useEffect(() => {
+
+        let selected_id = skipSelection ? skipSelection.id : -1;
         let html = skips_Data.map((skip, index) => {
             return (
-                <div key={index} className="skip-option" onClick={() => updateSkipSelection(skip.id)}>
+                <div key={index} className={`skip-option ${selected_id === skip.id ? 'active' : ''} `} onClick={() => updateSkipSelection(skip.id)}>
                     <span>{skip.size} cubic yards</span>
-                    <span>£{skip.price_before_vat * (1 + (skip.vat /100))}</span>
+                    <span>£{(skip.price_before_vat * (1 + (skip.vat / 100))).toFixed(2)} <span className="vatInc">(vat inc.)</span></span>
                 </div>
             );
         });

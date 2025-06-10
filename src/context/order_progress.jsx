@@ -21,12 +21,19 @@ export const OrderProgressProvider = ({ children }) => {
         setCurrentStep(prev => Math.max(prev - 1, 0));
     };
 
+    const updateStep = (step) => {
+        if (step >= 0 && step < orderProcess.length) {
+            setCurrentStep(step);
+        }
+    };
+
     return (
         <OrderProgressContext.Provider value={{ 
             current_step, 
             current_componet, 
             nextStep, 
-            prevStep 
+            prevStep,
+            updateStep 
         }}>
             {children}
         </OrderProgressContext.Provider>

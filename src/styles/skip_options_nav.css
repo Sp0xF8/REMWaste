@@ -1,11 +1,39 @@
 .skip-option {
     width: 100%;
-    background-color: blueviolet;
+    background-color: rgb(68, 68, 68);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: background-color 0.3s, color 0.05s;
+    justify-content: space-between;
+}
+
+.skip-option > span {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: large;
+    padding: 0.5rem;
+}
+
+
+
+.skip-option:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+.skip-option.active {
+    background-color: rgb(95, 95, 95);
+    color: yellow;
 }
 
 .skip-navigation {
     display: flex;
     width: 40%;
     flex-direction: column;
-    background-color: lightblue;
+    background-color: rgb(141, 134, 134);
+}
+
+
+.vatInc {
+    font-size: smaller;
 }

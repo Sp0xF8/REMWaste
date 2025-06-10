@@ -12,6 +12,7 @@ function SelectSkip() {
         <SkipSelectionProvider>
             <div className="select-skip-container">
                 <SkipNavigation />
+
                 <SkipOption />
             </div>
         </SkipSelectionProvider>

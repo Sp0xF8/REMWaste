@@ -6,7 +6,7 @@ import '../styles/order_process_nav.css';
 
 function OrderProcessNav(){
 
-    const { current_step } = React.useContext(OrderProgressContext);
+    const { current_step, prevStep, updateStep } = React.useContext(OrderProgressContext);
 
     const [navOptions, setNavOptions] = useState([]);
 
@@ -17,7 +17,11 @@ function OrderProcessNav(){
 
         let html = orderProcess.map((step, index) => {
             return (
-                <div key={index} className={`nav-option ${current_step > index ? 'under' : current_step === index ? 'active' : 'disabled'}`}>
+                <div
+                    key={index}
+                    className={`nav-option ${current_step > index ? 'under' : current_step === index ? 'active' : 'disabled'}`}
+                    onClick={current_step > index ? () => updateStep(index) : undefined}
+                >
                     <span>{step.title}</span>
                 </div>
             );
@@ -30,7 +34,7 @@ function OrderProcessNav(){
 
     return (
         <div className='order-process-nav-container'>
-            <div className='go-back'>
+            <div className='go-back' onClick={prevStep}>
                 <span className='back-arrow'>&#8592;</span>
                 <span>Go Back</span>
             </div>
