@@ -6,9 +6,9 @@ const OrderProgressContext = createContext();
 // context/OrderProgressContext.jsx
 
 export const OrderProgressProvider = ({ children }) => {
-    const [current_step, setCurrentStep] = useState(2);
+    const [current_step, setCurrentStep] = useState(1);
 
-    const [current_componet, setCurrentComponent] = useState(orderProcess[2]); // starts on the "Select Skip" section
+    const [current_componet, setCurrentComponent] = useState(orderProcess[1]); // starts on the "Waste type" section to demonstrate changing components
 
     useEffect(() => {
         setCurrentComponent(orderProcess[current_step]);

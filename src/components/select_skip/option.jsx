@@ -18,8 +18,6 @@ function SkipOption(){
 
     const handleContinue = (e) => {
         e.preventDefault();
-        // Handle the continue action here, e.g., navigate to the next step or submit the form
-        console.log("Continue button clicked");
         if (skipSelection) {
             updateOrderField('skipSize', skipSelection.size);
         }

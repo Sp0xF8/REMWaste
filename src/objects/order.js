@@ -31,6 +31,7 @@ class Order {
         this.address = new Address(json_data.address);
         this.wasteType = json_data.wasteType || WasteType.HOUSEHOLD;
         this.skipSize = json_data.skipSize || 0; // Size in cubic yards
+        ///..... additional feilds added for the remaining steps
     }
 
     toJSON() {
@@ -39,6 +40,7 @@ class Order {
             address: this.address.toJSON(),
             wasteType: this.wasteType,
             skipSize: this.skipSize || 0
+            ///..... additional fields added for the remaining steps
         };
     }
 

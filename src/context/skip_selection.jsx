@@ -40,7 +40,6 @@ export const SkipSelectionProvider = ({ children }) => {
     }, []);
 
 
-    // pass the id of the skip to the next step
     const updateSkipSelection = (newSelection) => {
         for (let i = 0; i < skips_Data.length; i++) {
             if (skips_Data[i].id === newSelection) {
